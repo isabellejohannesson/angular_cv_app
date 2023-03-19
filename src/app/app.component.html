@@ -1,1 +1,31 @@
-<app-contactinfo></app-contactinfo>
+<body class="bg-red-400 min-h-fit w-screen flex flex-col content-center">
+    <section class="flex flex-row rounded justify-evenly self-center p-6 w-3/4 h-2/6 mt-10 bg-white">
+      <div class="flex flex-row justify-center">
+          <img class="rounded h-full self-center h-48" src="../../assets/images/Jag_1.jpg" alt="porträttbild av mig">
+      </div>
+      <div class="flex flex-col items-center">
+          <h1 class="text-3xl font-bold text-center self-center">{{name}} {{lastName}}</h1>
+          <a href="{{github}}" target="_blank" class="text-2xl">Visit my Github!</a>
+          <p>{{email}}</p>
+          <form action="mailto:isabelle.johannesson@outlook.com" method="post" class="pl-2">
+          <button type="submit" class="px-2 bg-gray-200 text-center rounded mb-2 mt-4 shadow hover:bg-gray-400 hover:text-white">Email me!</button>
+          </form>
+      </div>
+    </section>
+    <section class="flex flex-col rounded h-2/6 w-2/4 p-6 bg-white justify-center self-center mt-20">
+      <div class="flex flex-col">
+        <h1 class="text-3xl font-bold text-center self-center">About me</h1>
+        <ul class="self-center text-center mt-10">
+          <li *ngFor="let i of description">{{i}}</li>
+        </ul>
+      </div>
+    </section>
+    <section class="flex flex-row rounded justify-evenly self-center p-2 w-3/4 h-2/6 mt-20 mb-10 bg-white">
+      <div class="flex flex-col justify-center">
+        <h1 class="text-3xl font-bold text-center self-center">Working experience</h1>
+        <ul class="self-center mt-10">
+          <li *ngFor="let i of experience">{{i}}</li>
+        </ul>
+      </div>
+    </section>
+  </body>
